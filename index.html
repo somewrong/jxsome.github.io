@@ -44,11 +44,36 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body onload="startclock()">
+	
+		<script language="JavaScript">
+		var timerID = null;
+		var timerRunning = false;
+		function stopclock (){
+		if(timerRunning)
+		clearTimeout(timerID);
+		timerRunning = false;}
+		function startclock () {
+		stopclock();
+		showtime();}
+		function showtime () {
+		var now = new Date();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds()
+		var timeValue = "" +((hours >= 12) ? "下午 " : "上午 " )
+		timeValue += ((hours >12) ? hours -12 :hours)
+		timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+		timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+		document.clock.thetime.value = timeValue;
+		timerID = setTimeout("showtime()",1000);
+		timerRunning = true;}
+	</script>
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-
+			<form name="clock">
+			<p class="text-left"><input name="thetime" style="font-size: 9pt;color:#000000;border:0" size="12"></p>
 			<h1 id="fh5co-logo"><a href="index.html">jxsome</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
@@ -121,55 +146,55 @@
 			</aside>
 			
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Services</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-settings"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Strategy</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-search4"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Explore</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Hobby</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-book"></i>
+								</div>
+								<div class="fh5co-text">
+									<h3>书籍</h3>
+									<p>喜欢看书，各种类型的都有 </p>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-music2"></i>
+								</div>
+								<div class="fh5co-text">
+									<h3>音乐</h3>
+									<p>古风 </p>
+								</div>
+							</div>
+						</div>
 
-					<div class="col-md-6">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-paperplane"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Direction</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-warning-outline"></i>
+								</div>
+								<div class="fh5co-text">
+									<h3>宅</h3>
+									<p>宅到不想说话 </p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-params"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Expertise</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<i class="icon-arrow-loop"></i>
+								</div>
+								<div class="fh5co-text">
+									<h3>猫</h3>
+									<p>铲屎官，嗯，未来会成为的</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			<div id="newdynamic" class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">最新博客</h2>
 				<div class="row row-bottom-padded-md">
@@ -178,8 +203,8 @@
 							<a href="#" class="blog-img"><img src="images/img-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">信</a></h3>
-								<span><small> by jxsome </small>  /  <small> 2017.12.10  </small>  /  <small> <i class="icon-comment"></i>&nbsp &nbsp 长篇</small></span>
-								<p>下雪了。白色的雪花落在庭院长青的树上，落在小径旁枯黄的草上，也落在他的肩上，他的头上。</p>
+								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<p>下雪了。白色的雪花落在庭院长青的树上，落在小径旁枯黄的草上，也落在</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
@@ -189,8 +214,8 @@
 							<a href="#" class="blog-img"><img src="images/img-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">蜉蝣</a></h3>
-								<span><small> by jxsome </small>  /  <small> 2017.12.10  </small>  /  <small> <i class="icon-comment"></i>&nbsp &nbsp 长篇</small></span>
-								<p>当第一缕阳光洒下来的时候，我睁开了眼。听身旁的大树说：今天是个无风，无云，无雨的平凡日子；</p>
+								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<p>当第一缕阳光洒下来的时候，我睁开了眼。听身旁的大树说：今天是个无风，无云</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
@@ -200,8 +225,8 @@
 							<a href="#" class="blog-img"><img src="images/img-3.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">牢</a></h3>
-								<span><small> by jxsome </small>  /  <small> 2017.12.10  </small>  /  <small> <i class="icon-comment"></i>&nbsp &nbsp 长篇</small></span>
-								<p>梦，无休止的梦，重复着的梦，重复着的无休止的梦。纵使经历过了几多次，纵然往复了许久时间。</p>
+								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<p>梦，无休止的梦，重复着的梦，重复着的无休止的梦。纵使经历过了几多次，纵然往复</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
@@ -211,8 +236,8 @@
 							<a href="#" class="blog-img"><img src="images/img-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">快剑</a></h3>
-								<span><small>by jxsome </small> / <small> 2017.12.10  </small> / <small> <i class="icon-comment"></i> &nbsp &nbsp短篇</small></span>
-								<p>白色的光芒犹在眼前，剑已然归鞘。<p>空间像极了破碎的镜子。</p>
+								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 短篇</small></span>
+								<p>白色的光芒犹在眼前，剑已然归鞘。空间像极了破碎的镜子。</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
 						</div>
@@ -224,7 +249,7 @@
 				<div class="fh5co-narrow-content">
 					<div class="row">
 						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-							<h1 class="fh5co-heading-colored">如果可以的话，</h1>
+							<h2 class="fh5co-heading-colored" data-animate-effect="fadeInLeft">如果可以的话，</h2>
 						</div>
 					</div>
 					<div id="cyReward" sid="主页赞赏" role="cylabs" data-use="reward"></div>
