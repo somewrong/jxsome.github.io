@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>jxsome博客首页</title>
+	<title>home of Jxsome'blog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -46,76 +46,58 @@
 	<![endif]-->
 
 	</head>
-	<body onload="startclock()">
-	
-		<script language="JavaScript">
-		var timerID = null;
-		var timerRunning = false;
-		function stopclock (){
-		if(timerRunning)
-		clearTimeout(timerID);
-		timerRunning = false;}
-		function startclock () {
-		stopclock();
-		showtime();}
-		function showtime () {
-		var now = new Date();
-		var hours = now.getHours();
-		var minutes = now.getMinutes();
-		var seconds = now.getSeconds()
-		var timeValue = "" +((hours >= 12) ? "下午 " : "上午 " )
-		timeValue += ((hours >12) ? hours -12 :hours)
-		timeValue += ((minutes < 10) ? ":0" : ":") + minutes
-		timeValue += ((seconds < 10) ? ":0" : ":") + seconds
-		document.clock.thetime.value = timeValue;
-		timerID = setTimeout("showtime()",1000);
-		timerRunning = true;}
-	</script>
+	<body>
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-			<form name="clock">
-			<p class="text-left"><input name="thetime" style="font-size: 9pt;color:#000000;border:0" size="12"></p></form>
-			<h1 id="fh5co-logo"><a href="index.html">jxsome</a></h1>
+			<h1 id="fh5co-logo"><a href="index.html">Jxsome</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<div id="divcss5"><img src="images/index03.jpg"></div>
 					<li class="fh5co-active"><a href="index.html">首页</a></li>
 					<li><a href="blog.html">博客</a></li>
-					<li><a href="portfolio.html">动态</a></li>
+					<li><a href="dynamic.html">动态</a></li>
 					<li><a href="about.html">关于</a></li>
-					<li><a href="contact.html">留言</a></li>
+					<li><a href="more.html">更多</a></li>
 				</ul>
 			</nav>
-<div id="QPlayer">
-<div id="pContent">
-	<div id="player">
-		<span class="cover"></span>
-		<div class="ctrl">
-			<div class="musicTag marquee">
-				<strong>Title</strong>
-				 <span> - </span>
-				<span class="artist">Artist</span>
-			</div>
-			<div class="progress">
-				<div class="timer left">0:00</div>
-				<div class="contr">
-					<div class="rewind icon"></div>
-					<div class="playback icon"></div>
-					<div class="fastforward icon"></div>
+
+			<div class="fh5co-footer">
+				<p>Copyright &copy; 2017.Jxsome All rights reserved.</p>
+				<div id="musicplayer">
+				<div id="QPlayer">
+			<div id="pContent">
+				<div id="player">
+					<span class="cover"></span>
+					<div class="ctrl">
+						<div class="musicTag marquee">
+							<strong>Title</strong>
+							 <span> - </span>
+							<span class="artist">Artist</span>
+						</div>
+						<div class="progress">
+							<div class="timer left">0:00</div>
+							<div class="contr">
+								<div class="rewind icon"></div>
+								<div class="playback icon"></div>
+								<div class="fastforward icon"></div>
+							</div>
+							<div class="right">
+								<div class="liebiao icon"></div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="right">
-					<div class="liebiao icon"></div>
+				<div class="ssBtn">
+						<div class="adf"></div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="ssBtn">
-	        <div class="adf"></div>
-    </div>
-</div>
-<ol id="playlist"></ol>
-</div>
+			<ol id="playlist"></ol>
+			</div>
+			
+		
+		
+			
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.marquee.min.js"></script>
@@ -204,17 +186,12 @@ function bgChange(){
 window.onload = bgChange;
 </script>
 
-			<div class="fh5co-footer">
-				<p>Copyright &copy; 2017.Company name All rights reserved.</p>
-				<ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-				</ul>
-			</div>
-
-		</aside>
+			
+				
+			
+				</div>
+			</aside>
+		</div>
 
 		<div id="fh5co-main">
 			<aside id="fh5co-hero" class="js-fullheight">
@@ -321,7 +298,7 @@ window.onload = bgChange;
 							<a href="#" class="blog-img"><img src="images/img-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">信</a></h3>
-								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<span><small>by Jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
 								<p>下雪了。白色的雪花落在庭院长青的树上，落在小径旁枯黄的草上，也落在</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
@@ -332,7 +309,7 @@ window.onload = bgChange;
 							<a href="#" class="blog-img"><img src="images/img-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">蜉蝣</a></h3>
-								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<span><small>by Jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
 								<p>当第一缕阳光洒下来的时候，我睁开了眼。听身旁的大树说：今天是个无风，无云</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
@@ -343,7 +320,7 @@ window.onload = bgChange;
 							<a href="#" class="blog-img"><img src="images/img-3.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">牢</a></h3>
-								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
+								<span><small>by Jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 长篇</small></span>
 								<p>梦，无休止的梦，重复着的梦，重复着的无休止的梦。纵使经历过了几多次，纵然往复</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
@@ -354,7 +331,7 @@ window.onload = bgChange;
 							<a href="#" class="blog-img"><img src="images/img-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
 							<div class="desc">
 								<h3><a href="#">快剑</a></h3>
-								<span><small>by jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 短篇</small></span>
+								<span><small>by Jxsome </small> / <small> 2017.12.10 </small> / <small> <i class="icon-comment"></i> &nbsp 短篇</small></span>
 								<p>白色的光芒犹在眼前，剑已然归鞘。空间像极了破碎的镜子。</p>
 								<a href="#" class="lead">阅读全文 <i class="icon-arrow-right3"></i></a>
 							</div>
