@@ -1,0 +1,10 @@
+[
+null,
+{"id":1,"expanded":true,"name":"世界地图 3","order":1,"parentId":0,"scrollX":1388,"scrollY":2206},
+{"id":2,"expanded":true,"name":"小镇","order":2,"parentId":1,"scrollX":1068,"scrollY":792},
+{"id":3,"expanded":false,"name":"酒店 1F","order":3,"parentId":2,"scrollX":816,"scrollY":648},
+{"id":4,"expanded":false,"name":"武器商店","order":4,"parentId":2,"scrollX":832,"scrollY":640},
+{"id":5,"expanded":false,"name":"医院","order":5,"parentId":2,"scrollX":1068,"scrollY":648},
+{"id":6,"expanded":false,"name":"旅馆 1F","order":6,"parentId":2,"scrollX":832,"scrollY":640},
+{"id":7,"expanded":false,"name":"护甲商店","order":7,"parentId":2,"scrollX":832,"scrollY":640}
+]
